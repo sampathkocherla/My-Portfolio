@@ -1,6 +1,6 @@
 # 🌐 Chahat's Personal Portfolio
 
-![Portfolio Banner](./public/portfolio.png)
+![Portfolio Banner](./public/Frontimage.png)
 
 Welcome to my personal portfolio — a sleek, modern website built with **React + Vite**. It showcases my skills, projects, and experiences as a full-stack developer focused on building secure, scalable, and elegant web applications.
 
