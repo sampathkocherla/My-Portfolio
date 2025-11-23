@@ -27,7 +27,7 @@ Welcome to my personal portfolio — a sleek, modern website built with **React 
 ## 🖼️ Preview
 
 
-Visit the live version: [Chahar's Personal Portfolio](https://chahat-portfolio-1001.web.app)
+Visit the live version: [Sampaths's Personal Portfolio](my-portfolio-sandy-xi-72.vercel.app)
 
 ---
 
@@ -35,7 +35,7 @@ Visit the live version: [Chahar's Personal Portfolio](https://chahat-portfolio-1
 
 ```
 # Clone the repository
-git clone https://github.com/chahatsharma1/chahat-portfolio.git
+git clone  https://github.com/sampathkocherla/My-Portfolio.git
 
 # Install dependencies
 npm install
