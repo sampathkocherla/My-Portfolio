@@ -1,0 +1,11 @@
+
+.contact-section .heading-center {
+    text-align: center;
+}
+
+.contact-section .contact-text {
+    font-size: 1.25rem;
+    max-width: 500px;
+    margin: auto;
+    text-align: center;
+}

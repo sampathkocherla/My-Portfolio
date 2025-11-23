@@ -1,0 +1,566 @@
+/* theme toggler  */
+.theme-toggle {
+    height: 24px;
+    width: 24px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.theme-toggle svg {
+    height: 20px;
+    width: 20px;
+}
+
+.theme-toggle .crkl,
+.theme-toggle .rays {
+    transform-origin: center center;
+    transition: transform calc(500ms * .65) cubic-bezier(0, 0, 0, 1.25) calc(500ms * .35);
+}
+
+.theme-toggle svg.active .rays {
+    transform: scale(.75);
+}
+
+.theme-toggle svg.active .crkl {
+    transform: scale(1.4);
+}
+
+.theme-toggle #theme-toggle-clip path {
+    transition-property: transform, d;
+    transition-duration: calc(500ms * .6);
+    transition-timing-function: cubic-bezier(0, 0, .5, 1);
+}
+
+.theme-toggle svg.active #theme-toggle-clip path {
+    d: path("M-9 3h25a1 1 0 0017 13v30H0Z");
+    transition-delay: calc(500ms * .4);
+    transition-timing-function: cubic-bezier(0, 0, 0, 1.25);
+}
+
+/* dock  */
+
+.dock {
+    padding: 8px;
+    border: 1px solid var(--clr-bdr);
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 2;
+    bottom: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: var(--shadow-1);
+    background-color: var(--clr-comp);
+}
+/* 
+.dock-button-container {
+    padding: 0 4px;
+    transition: padding .2s ease-in-out;
+}
+
+.dock-button-container:hover {
+    padding: 0 12px;
+    
+} */
+.dock-button-container {
+    display: flex;           /* Puts Icon and Label side-by-side */
+    align-items: center;     /* Centers them vertically */
+    padding: 0 4px;
+    transition: all .2s ease-in-out;
+    cursor: pointer; 
+    margin-left: 15px;        
+}
+
+.dock-button-container:hover {
+    padding: 0 12px;
+    background-color: rgba(255, 255, 255, 0.1); /* Optional: subtle highlight on the whole capsule */
+    border-radius: 50px;
+}
+.dock-button {
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px;
+
+    border-radius: 100px;
+    transition: background-color .3s ease-in-out, color .3s ease-in-out;
+}
+.dock-label {
+     margin-left:2px;    /* Adds space between the Icon and the Text */
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--clr-txt);  /* Uses your theme color */
+    white-space: nowrap;    /* Prevents text from wrapping to a new line */
+    
+    /* Optional: If you want the text to fade in only on hover */
+    /* opacity: 0; */
+    /* transition: opacity 0.2s ease; */
+}
+.dock-button:hover {
+    background-color: var(--clr-comp-hover);
+    color: var(--clr-accent);
+}
+
+
+.pseudo-a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    text-decoration: none;
+}
+
+/* tooltip  */
+
+.tooltip {
+    position: fixed;
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    white-space: nowrap;
+    background-color: var(--tooltip-bg);
+    color: var(--tooltip-txt);
+    border-radius: 3px;
+    transition: opacity .3s ease-in-out;
+    z-index: 100;
+}
+
+
+/* sparkles  */
+.sp-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+.sp-sparkle-wrapper {
+    position: absolute;
+    display: block;
+    animation: comeInOut 700ms forwards;
+}
+
+.sparkle-svg {
+    display: block;
+    animation: spin 1000ms linear;
+}
+
+.sp-child-wrapper {
+    position: relative;
+    z-index: 1;
+    font-weight: bold;
+}
+
+/* cursor  */
+.custom-cursor {
+    position: fixed;
+    pointer-events: none;
+    width: 24px;
+    height: 24px;
+    transform: translate(-6px, -5px);
+    z-index: 10000;
+}
+
+/* Buttons  */
+
+.button-1 {
+    border: none;
+    display: flex;
+    padding: 0.75rem 1.5rem;
+    background-color: var(--clr-accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    user-select: none;
+    gap: 5px;
+    box-shadow: 0 4px 6px -1px var(--clr-accent-l2), 0 2px 4px -1px var(--clr-accent-l2);
+    transition: all 0.6s ease;
+}
+
+.button-1:hover {
+    box-shadow: 0 10px 15px -3px var(--clr-accent-l1), 0 4px 6px -2px var(--clr-accent-l1);
+}
+
+.button-1:active {
+    opacity: 0.85;
+    box-shadow: none;
+}
+
+.button-1 svg {
+    width: 1rem;
+    height: 1rem;
+}
+
+
+/* Buttons  */
+
+.skill-card {
+    background-color: var(--clr-comp);
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid var(--clr-bdr);
+    margin-bottom: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.skill-card h3 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 4px;
+    text-transform: uppercase;
+}
+
+.skill-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-list li {
+    color: var(--clr-txt);
+    background: var(--clr-comp-hover);
+    border: 1px solid var(--clr-bdr);
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all ease-in-out .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    gap: 4px;
+}
+
+.skill-list li:hover {
+    background: var(--clr);
+    color: var(--clr-comp);
+}
+
+/* Timeline styles ------------------------------ */
+.timeline {
+    list-style-type: none;
+    border-left: 3px solid var(--clr-accent);
+    padding: 1rem 0;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline-item .stamp {
+    color: var(--clr-txt-sec);
+    font-size: 12px;
+    margin-bottom: .75rem;
+    text-transform: uppercase;
+}
+
+.timeline-item>a {
+    color: inherit;
+    text-decoration: none;
+    transition: color .3s ease-in-out;
+}
+
+.timeline-item>a:hover {
+    color: var(--clr-accent);
+}
+
+
+.timeline-icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    background-color: var(--clr-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.timeline-icon svg,
+.timeline-icon img {
+    width: 2rem !important;
+    height: 2rem !important;
+    border-radius: 50%;
+    color: var(--clr);
+    background-color: var(--bg-clr);
+}
+
+.timeline-item h1,
+.timeline-item h2,
+.timeline-item h3,
+.timeline-item h4,
+.timeline-item h5,
+.timeline-item h6 {
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--clr);
+}
+
+.timeline-item p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Timeline styles ------------------------------ */
+
+.project-card-holder {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--clr-comp);
+    border: 1px solid var(--clr-bdr);
+    box-shadow: var(--shadow-3);
+    width: 100%;
+    border-radius: .75rem;
+    overflow: hidden;
+    transition: box-shadow .3s ease-in-out;
+    height: 100%;
+}
+
+.project-card:hover {
+    box-shadow: var(--shadow-1);
+}
+
+.project-card img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+    object-position: top;
+}
+
+.project-card-content {
+    padding: .75rem .5rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-card p {
+    flex-grow: 1;
+}
+
+
+.project-card h1,
+.project-card h2,
+.project-card h3,
+.project-card h4 {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.project-card p {
+    color: var(--clr-txt-sec);
+    font-size: 14px;
+    margin: .5rem 0;
+}
+
+.project-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem;
+    margin-top: auto;
+    color: var(--clr-accent);
+}
+
+.project-card-tag {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    background-color: var(--clr-comp-hover);
+}
+
+@media (max-width: 768px) {
+    .project-card-holder {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card {
+        max-width: 500px;
+        margin: auto;
+    }
+}
+
+.project-card-actions {
+    display: flex;
+    padding: .75rem .5rem;
+    gap: .5rem;
+}
+
+.project-card-actions button {
+    font-size: 12px;
+    padding: .5rem .75rem;
+}
+
+.review-card {
+    padding: 1rem;
+    border: 1px solid var(--clr-bdr);
+    margin: 0 .5rem;
+    border-radius: .75rem;
+    background-color: var(--clr-comp);
+    max-width: 16rem;
+    height: 10rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    user-select: none;
+    overflow-y: hidden;
+}
+
+.review-card:hover {
+    background-color: var(--clr-comp-hover);
+}
+
+.review-card .user {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.review-card .user h4 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.review-card .user p {
+    margin: 0;
+    font-size: 12px;
+    color: var(--clr-txt-sec);
+}
+
+.review-card .user img {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+}
+
+.review-card .user .img {
+    background-color: var(--clr-bg);
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.review-card>p {
+    margin: 0;
+    margin-top: 1rem;
+}
+
+
+
+@keyframes comeInOut {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(0);
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(180deg);
+    }
+}
+/* Hide Nav on screens smaller than 768px (Tablets and Phones) */
+@media (max-width: 768px) {
+    .button-1{
+          box-shadow: 0 4px 4px -1px var(--clr-accent-l0), 0 2px 2px -1px var(--clr-accent-l0);
+    }
+  .dock-label {
+        display: none !important;
+    }
+ 
+    /* 2. Adjust the Navbar container for icons only */
+    .nav {
+        top:5px;
+        width: 90%;         /* Make it wider on phones */
+        max-width: 400px;   /* But not too wide */
+        justify-content: center; /* Spread icons evenly */
+        padding: 10px 15px; /* Reduce padding */
+        gap: 0;             /* Remove the large gap since we use space-between */
+    }
+
+    /* 3. Optional: Make icons slightly larger for touch targets */
+    .dock-button svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+.nav {
+   position: fixed;
+    top: 20px;   /* Changed from bottom to top */
+    left: 50%;
+    transform: translateX(-50%);
+    
+    /* Visual Styling */
+    display: flex;
+
+    padding: 12px 24px;
+    
+    background-color: var(--clr-comp);
+    border: 1px solid var(--clr-bdr);
+    border-radius: 50px;
+    box-shadow: var(--shadow-1);
+    z-index: 1000; /* High z-index ensures it floats over hero section */
+    
+    /* Animation settings */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* --- 2. The Hidden State (Animation) --- */
+.nav.nav-hidden {
+    /* When hidden, slide it down slightly towards the dock and fade out */
+    transform: translateX(-50%) translateY(20px) scale(0.9);
+    opacity: 0;
+    pointer-events: none; /* So you can't click invisible buttons */
+}
+
+/* --- 3. The Toggle Button (Bottom Right Corner) --- */
+

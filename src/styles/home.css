@@ -1,0 +1,282 @@
+.hero-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 5rem 0;
+}
+
+.hero-1 {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-2 {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-2>div {
+    text-align: center;
+}
+
+.hero-2>div>div:nth-child(1) {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-2>div>div:nth-child(2) h1 {
+    margin: 0;
+    font-size: 5rem;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.space-container {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    --mask: linear-gradient(to bottom,
+            rgba(0, 0, 0, 1) 0, rgba(0, 0, 0, 1) 40%,
+            rgba(0, 0, 0, 0) 95%, rgba(0, 0, 0, 0) 0) 100% 50% / 100% 100% repeat-x;
+
+    -webkit-mask: var(--mask);
+    mask: var(--mask);
+}
+
+.dark .space-container {
+    background-color: var(--space-bg-clr);
+}
+
+.chahat-img-cont {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.chahat-img {
+    width: 100%;
+    border-radius: 100px;
+    border: 2px solid var(--clr-bdr);
+    z-index: 10;
+    transition: all .3s ease-in-out;
+}
+
+
+.chahat-img-cont:hover .chahat-img {
+    width: 150px;
+    position: absolute;
+    border-radius: 5%;
+}
+
+.wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block;
+}
+
+.icon-cloud {
+    width: 100%;
+    margin: auto;
+}
+
+
+.cloud-1 {
+    width: 35vw;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    z-index: -1;
+    opacity: .2;
+}
+
+.cloud-2 {
+    width: 35vw;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    transform: scaleX(-1);
+    z-index: -1;
+    opacity: .2;
+}
+
+.cloud-3 {
+    width: 45vw;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    transform: scaleX(-1);
+    z-index: 100;
+    opacity: .1;
+}
+
+.cloud-4 {
+    width: 45vw;
+    position: absolute;
+    top: -10px;
+    left: 0;
+    z-index: 100;
+    opacity: .1;
+}
+
+.dark .cloud-1,
+.dark .cloud-2 {
+    opacity: 1;
+}
+
+.dark .cloud-3,
+.dark .cloud-4 {
+    opacity: .5;
+}
+
+.outlined-txt {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: var(--clr-accent);
+    color: transparent;
+}
+
+.shine-txt {
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    background: linear-gradient(to right, var(--clr-accent) 0, white 10%, var(--clr-accent) 20%);
+    background-size: 200%;
+    background-position: 0;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite linear;
+    animation-fill-mode: forwards;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+
+@keyframes shine {
+    0% {
+        background-position: 0;
+    }
+
+    60% {
+        background-position: 100%;
+    }
+
+    100% {
+        background-position: 200%;
+    }
+}
+
+.highlight-txt {
+    color: var(--clr-accent);
+}
+
+
+
+
+@keyframes wave-animation {
+    0% {
+        transform: rotate(0.0deg)
+    }
+
+    10% {
+        transform: rotate(14.0deg)
+    }
+
+    20% {
+        transform: rotate(-8.0deg)
+    }
+
+    30% {
+        transform: rotate(14.0deg)
+    }
+
+    40% {
+        transform: rotate(-4.0deg)
+    }
+
+    50% {
+        transform: rotate(10.0deg)
+    }
+
+    60% {
+        transform: rotate(0.0deg)
+    }
+
+    100% {
+        transform: rotate(0.0deg)
+    }
+}
+
+@media (max-width: 1280px) {
+    .hero-2>div>div:nth-child(2) h1 {
+        font-size: 4.5rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero-2>div>div:nth-child(2) h1 {
+        font-size: 3.75rem;
+    }
+
+    .icon-cloud {
+        width: 90%;
+    }
+}
+
+@media (max-width: 840px) {
+    .hero-2>div>div:nth-child(2) h1 {
+        font-size: 3rem;
+    }
+
+    .cloud-1,
+    .cloud-2,
+    .cloud-3,
+    .cloud-4 {
+        top: -5px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column;
+    }
+
+    .hero-1 {
+        width: 100%;
+    }
+
+    .hero-2>div>div:nth-child(2) h1 {
+        font-size: 3.75rem;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .hero-2>div>div:nth-child(2) h1 {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero-2>div>div:nth-child(2) h1 {
+        font-size: 2.5rem;
+    }
+
+    .chahat-img-cont:hover .chahat-img {
+        width: 100px;
+    }
+}

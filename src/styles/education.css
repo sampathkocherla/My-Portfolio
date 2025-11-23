@@ -1,0 +1,30 @@
+.education {
+    display: flex;
+}
+
+.education>* {
+    flex: 1;
+}
+
+.education .illustration {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.education .illustration svg {
+    max-width: 300px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .education {
+        flex-direction: column;
+    }
+
+    .education .illustration svg {
+        margin: auto;
+        display: flex;
+        margin-bottom: 1rem;
+    }
+}

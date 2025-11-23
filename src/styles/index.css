@@ -1,0 +1,114 @@
+:root {
+  --clr-bg: #fff;
+  --clr-txt: rgb(26, 30, 35);
+  --clr-txt-sec: rgba(26, 30, 35, 0.5);
+  --clr-bdr: rgb(232, 234, 238);
+  --clr-comp: #fff;
+  --clr-comp-hover: rgb(237, 243, 248);
+
+  --clr-accent: #488aec;
+  --clr-accent-l1: #488aec4f;
+  --clr-accent-l2: #488aec31;
+  --clr-accent-d1: #306cc6;
+
+  --clr-accent1: #38BDF8;
+  --clr-accent2: #6C48C5;
+  --clr-accent3: #C68FE6;
+  --clr-accent4: #00BFA6;
+  --clr-accent5: #7DD3FC;
+  --clr-accent6: #EF4444;
+  --clr-sec: #E82561;
+
+
+  --shadow-1: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.1) 0px 4px 6px -4px;
+  --shadow-2: 0 10px 15px -3px #488aec4f, 0 4px 6px -2px #488aec17;
+  --shadow-3: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.1) 0px 1px 2px -1px;
+  --tooltip-bg: #333;
+  --tooltip-txt: #fff;
+
+  --space-bg-clr: rgb(39, 39, 72);
+}
+
+
+body.dark {
+  --clr-bg: rgb(13, 17, 23);
+  --clr-txt: #dad9ff;
+  --clr-txt-sec: rgba(240, 246, 252, .5);
+  --clr-bdr: #3d444d;
+  --clr-comp: rgb(33, 40, 48);
+  --clr-comp-hover: rgb(58, 65, 72);
+
+  --tooltip-bg: #efefef;
+  --tooltip-txt: #333;
+
+  --clr-accent: #488aec;
+  --clr-accent2: #7896f8;
+  --clr-accent3: #C68FE6;
+  --clr-sec: #E82561;
+
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: var(--clr-bg);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--clr-accent);
+  border-radius: 10px;
+}
+
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0;
+  background-color: var(--clr-bg);
+  color: var(--clr-txt);
+  font-family: "Space Grotesk", serif;
+  font-weight: 500;
+  font-style: normal;
+
+  padding-bottom: 3rem;
+}
+
+
+button {
+  color: inherit;
+}
+
+svg {
+  fill: currentColor;
+}
+
+body {
+  cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23FFF" stroke="%23000" stroke-width="2" d="M5.5 3.21V20.8c0 .45.54.67.85.35l4.86-4.86a.5.5 0 0 1 .35-.15h6.87a.5.5 0 0 0 .35-.85L6.35 2.85a.5.5 0 0 0-.85.35Z"></path></svg>') 4 0, auto;
+}
+
+a {
+  color: var(--clr-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--clr-accent-d1);
+}
+
+p {
+  color: inherit;
+}
+
+.section {
+  padding: 24px;
+  max-width: 1024px;
+  margin: auto;
+  padding-bottom: 10vh;
+}
+html {
+  scroll-behavior: smooth;
+}
