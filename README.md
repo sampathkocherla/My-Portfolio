@@ -1,4 +1,4 @@
-# 🌐 Chahat's Personal Portfolio
+# 🌐 Sampath's Personal Portfolio
 
 ![Portfolio Banner](./public/Frontimage.png)
 
