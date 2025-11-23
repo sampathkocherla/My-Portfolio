@@ -27,7 +27,7 @@ Welcome to my personal portfolio — a sleek, modern website built with **React 
 ## 🖼️ Preview
 
 
-Visit the live version: [Sampaths's Personal Portfolio](my-portfolio-sandy-xi-72.vercel.app)
+Visit the live version: [Sampath's Personal Portfolio](https://my-portfolio-sandy-xi-72.vercel.app/)
 
 ---
 
